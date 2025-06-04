@@ -81,3 +81,4 @@ After setting up the repository, you'll want to download the current release of 
 [orange]: https://github.com/PiaCarrot/pokeorange
 [pokered]: https://github.com/pret/pokered
 [lunaverse]: https://discord.gg/SQwkd7r
+\n\n한글판 포켓몬 레드 ++
