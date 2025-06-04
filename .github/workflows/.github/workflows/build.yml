@@ -1,0 +1,30 @@
+name: Build Red++ Korean Edition
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y make rgbds
+
+    - name: Build Red++
+      run: |
+        make clean
+        make
+
+    - name: Upload GBC Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: PokemonRed-Korean
+        path: "*.gbc"
